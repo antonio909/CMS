@@ -218,3 +218,69 @@ function folders_check_chmod($dir, $bad_files = array()) {
   return $bad_files;
   
 }
+
+if ($_REQUEST['action'] and !isset($_SESSION['dle_install'])) {
+  msgbox("{$lang['install_5']} <br><br><a href=\"{$url}install.php\">{$url}install.php</a>");
+}
+
+if ( file_exists(ENGINE_DIR.'/data/config.php') ) {
+
+  msgbox( $lang['install_6'] );
+  
+}
+
+if ($_REQUEST['action'] == "eula") {
+
+  echo $skin_header;
+
+  echo <<<HTML
+    <form id="check-eula" method="get" action="">
+      <input type=hidden name=action value="function_check">
+      <script language='javascript'>
+        function check_eula(){
+
+          if( document.getElementById( 'eula' ).checked == true )
+          {
+            return true;
+            
+          } else {
+
+            DLEalert( '{$lang['install_16']}', '{$lang['all_info']}' );
+            return false;
+          }
+        };
+        document.getElementById( 'check-eula' ).onsubmit = check_eula;
+      </script>
+      <div class="panel panel-default fadeIn">
+        <div class="panel-heading">
+          {$lang['install_11']}
+        </div>
+        <div class="panel-body">
+          {$lang['install_12']}
+          <br><br>
+          <div style="height: 300px; border: 1px solid #76774C; background-color: #FDFDD3; padding: 5px; overflow: auto;">{$lang['install_13']}</div>
+          <div class="checkbox"><label><input type="checkbox" name="eula" id="eula" class="icheck">{$lang['install_14']}</label></div>
+        </div>
+        <div class="panel-footer">
+          <button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>{$lang['install_15']}</button>
+        </div>
+      </div>
+    </form>
+    HTML;
+
+  echo $skin_footer;
+  
+} elseif ($_REQUEST['action'] == "function_check") {
+
+  $message = <<<HTML
+    <form method="get" action="">
+      <input type=hidden name="action" value="function_check">
+      <div class="panel panel-default fadeIn">
+        <div class="panel-heading">
+          {$lang['install_17']}
+        </div>
+        <div class="table-responsive"></div>
+      </div>
+    </form>
+  HTML;
+}

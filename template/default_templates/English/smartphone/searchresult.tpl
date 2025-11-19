@@ -13,7 +13,7 @@
   </div>
   <div class="panel clrfix">
     <b class="com-num ico" title="Comments - {comments-num}">[com-link]{comments-num}[/com-link]</b>
-    <b class="more">[full-link]{More}[/full-link]</b>
+    <b class="more">[full-link]More[/full-link]</b>
   </div>
 </article>
 [/fullresult]

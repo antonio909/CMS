@@ -54,3 +54,39 @@
      h = 0,
      n = {},
      g;
+ (function() {
+   try {
+     var a = f.createElement("a");
+     a.innerHTML = "<xyz></xyz>";
+     j = "hidden" in a;
+     var b;
+     if (!(b = 1 == a.childNodes.length)) {
+       f.createElement("a");
+       var c = f.createDocumentFragment();
+       b = "undefined" == typeof c.cloneNode ||
+           "undefined" == typeof c.createDocumentFragment || "undefined" == typeof c.createElement
+     }
+     g = b
+   } catch (d) {
+     g = j = !0
+   }
+ })();
+  var e = {
+    elements: k.elements || "abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",
+    version: "3.6.2pre",
+    shivCSS; !1 !== k.shivCSS,
+    supportsUnknowElements: g,
+    shivMethods: !1 !== k.shivMethods,
+    type: "default",
+    shivDocument: q,
+    createElement: p,
+    createDocumentFragment: function(a, b) {
+      a || (a = f);
+      if (g) return a.createDocumentFragment();
+      for (var b = b || i(a), c = b.frag.cloneNode(), d = 0, e = m(), h = e.length; d < h; d++) c.createElement(e[d]);
+      return c
+    }
+  };
+  l.html5 = e;
+  q(f)
+})(this, document);

@@ -375,3 +375,33 @@ table.pm .navigation { border-top-width: 0; margin: 0; }
 .pm_list.pm_icon svg { width: 1.4rem; height: 1.4rem; vertical-align: middle; }
 
 .pm_list.pm_icon.pm-unread-image { color: #3394e6; }
+.pm td.pm-list.pm_icon, .userstop td, th.pm_head.pm_icon { border-bottom: none; }
+.pm_list.pm_icon.pm-reply-image { color: #087e02c4; }
+.pm_list.pm_icon.pm-read-image { color: #afafaf; }
+
+.pm_list .pm_last_message, .pm_list .pm_last_date, .pm_list .pm_with_user { color: #64748b; font-size: .8rem; }
+.pm tbody > tr:hover { background-color: #e2e8f099; }
+.pm_navigation .navigation { display: inline-block; color: #333333; background-color: #f5f5f5; border-radius: 0.188rem; padding: .4rem; }
+
+.pm_navigation .navigation a, .pm_navigation .navigation span { padding: 0.5rem; min-width: 2.25rem; }
+.pm_navigation .navigation span { background-color: #4581d0; color: #fff; }
+.pm_navigation .navigation a { text-decoration: none; color: #000; }
+.pm_navigation .navigation a:hover { background-color: #e2e8f0; }
+
+@media only screen and (min-width: 601px) { .DLEPush-notification.wrapper { min-width: 400px; } }
+
+.DLEPush-notification .DLEPush-close:hover { opacity: 1; }
+
+.DLEPush-notification.wrapper.push-success { background-color: #e0f2f1; }
+
+.DLEPush-notification.wrapper.push-success .DLEPush-icon { background-color: #00897b; }
+
+.DLEPush-notification.wrapper.push-warning { background-color: #FFF3E0; }
+
+.DLEPush-notification.wrapper.push-warning .DLEPush-icon { background-color: #FF9800; }
+
+.DLEPush-notification.wrapper.push-error { background-color: #FBE9E7; }
+
+.DLEPush-notification.wrapper.push-error .DLEPush-icon { background-color: #FF5722; }
+
+.quote_link svg { color: #6c838e; vertical-align: middle; }

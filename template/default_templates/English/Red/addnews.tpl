@@ -30,3 +30,44 @@
             <label for="title">Title</label>
             <input type="text" name="Title" id="title" value="{title}" class="wide" required>
           </li>
+          [urltag]
+          <li class="form-group imp">
+            <label for="alt_name">Article URL</label>
+            <input type="text" name="alt_name" id="alt_name" value="{alt-name}" class="wide">
+          </li>
+          [/urltag]
+          <li class="form-group imp">
+            <label for="category">Category</label>
+            {category}
+          </li>
+          <li class="form-group">
+            <a class="btn btn_border" href="#" onclick="$('.addvote').toggle(); return false;">Add voting</a>
+          </li>
+          <li class="form-group addvote" style="display: none;">
+            <label for="vote_title">Voting title</label>
+            <input type="text" name="vote_title" id="vote_title" value="{votetitle}" maxlength="150" class="wide">
+          </li>
+          <li class="form-group addvote" style="display: none;">
+            <label for="frage">Question</label>
+            <input type="text" name="frage" id="frage" value="{frage}" maxlength="150" class="wide">
+          </li>
+          <li class="form-group addvote" style="display: none;">
+            <label for="vote_body">Answer choices</label>
+            <p class="grey">Each new line is one of the answer choices</p>
+            <textarea name="vote_body" id="vote_body" rows="10" class="wide">{votebody}</textarea>
+            <div class="checkbox">
+              <label class="form-check-label"><input class="form-check-input" type="checkbox" name="allow_m_vote" id="allow_m_vote" value="1" {allowmvote}><span>Allow multiple choice</span></label>
+            </div>
+          </li>
+          [allow-shortstory]
+          <li class="form-group imp">
+            <label for="short_story">Introductory part</label>
+            {shortarea}
+          </li>
+          [/allow-shortstory]
+          [allow-fullstory]
+          <li class="form-group">
+            <label for="full_story">Full part</label>
+            {fullarea}
+          </li>
+          [/allow-fullstory]

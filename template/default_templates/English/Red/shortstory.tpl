@@ -49,3 +49,55 @@
           [not-group=5]
           <div class="fav_btn">
             [add-favorites]<span title="Add to favorites"><svg class="icon icon-fav"><use xlink:href="#icon-fav"></use></svg></span>[/add-favorites]
+            [del-favorites]<span title="Remove from favorites"><svg class="icon icon-fav"><use xlink:href="#icon-fav"></use></svg></span>[/del-favorites]
+          </div>
+          <div class="edit_btn" title="Edit">
+            [edit]<i title="Edit"></i>[edit]
+          </div>
+          [/not-group]
+          [rating]
+          <div class="rate">
+            [rating-type-2]
+            <div class="rate_like" title="Like">
+              [rating-plus]
+              <span class="rate_like_icon"><svg class="icon icon-like"><use xlink:href="#icon-like"></use></svg></span>
+              <span class="grey">{rating}</span>
+              [/rating-plus]
+            </div>
+            [/rating-type-2]
+            [rating-type-3]
+            <div class="rate_like-dislike">
+              <div class="rate_like-dislike_in">
+                [rating-plus]<span class="plus_icon" title="Like"><span>+</span></span>[/rating-plus]
+                [rating-minus]<span class="plus_icon minus" title="Dislike"><span>-</span></span>[/rating-minus]
+              </div>
+              <span class="grey">{rating}</span>
+            </div>
+            [/rating-type-3]
+            [rating-type-4]
+            <div class="rate_like-dislike">
+              <span class="grey"><span class="ratingtypeplusminus ratingplus">{likes}</span></span>
+              <div class="rate_like-dislike_in">
+                [rating-plus]<span class="plus_icon" title="Like"><span>+</span></span>[/rating-plus]
+                [rating-minus]<span class="plus_icon minus" title="Like"><span>-</span></span>[/rating-minus]
+              </div>
+              <span class="grey"><span class="ratingtypeplusminus ratingminus">{dislikes}</span></span>
+            </div>
+            [/rating-type-4]
+          </div>
+          [/rating]
+        </div>
+      </div>
+      <div class="text">
+        {short-story}
+        [edit-date]
+        <p class="editdate grey">Article is edited by: <b>{editor}</b> - {edit-date}<br>
+          [edit-reason]Reason: {edit-reason}[/edit-reason]
+        </p>
+        [/edit-date]
+        <div class="more"><a href="{full-link}" title="Read more: {title}" class="btn"><b class="ultrabold">Read more</b></a></div>
+      </div>
+    </div>
+  </div>
+  [fixed]<span class="fixed_label" title="Fixed!">Fixed!</span>[/fixed]
+</article>
